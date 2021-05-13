@@ -1,6 +1,7 @@
 using AutoMapper;
 using DotnetIntro.Models;
 using DotnetIntro.Presenters;
+using DotnetIntro.Requests;
 
 namespace DotnetIntro.Profiles
 {
@@ -9,6 +10,9 @@ namespace DotnetIntro.Profiles
         public CommandsProfile()
         {
             CreateMap<Command, CommandPresenter>();
+            CreateMap<CommandCreateRequest, Command>();
+            CreateMap<CommandUpdateRequest, Command>();
+            CreateMap<Command, CommandUpdateRequest>();
         }
     }
 }
